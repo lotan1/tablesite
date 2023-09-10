@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Google Sheet Site Builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Viewer</title>
 </head>
 <body>
-    <form action="/fetch_sheet" method="post">
-        <label for="sheet_url">Enter Google Sheet URL:</label>
-        <input type="text" name="sheet_url" required>
-        <button type="submit">Build Site</button>
-    </form>
+    <h1>Google Sheet Viewer</h1>
+    <label for="sheetURL">Enter Google Sheet URL:</label>
+    <input type="text" id="sheetURL">
+    <button onclick="fetchSheetData()">View Sheet</button>
+
+    <table id="sheetData"></table>
+
+    <script src="script.js"></script>
 </body>
 </html>
